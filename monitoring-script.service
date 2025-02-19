@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitoring Script Service
+After=network.target
+
+[Service]
+User=monitoring-user
+ExecStart=/home/user/monitoring.sh
+Type=oneshot
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
